@@ -1,23 +1,25 @@
-import { useState } from "react"
+import { useState } from "react";
+import './App.css';
 
-export function App(){
-
-const [numero, setNumero] = useState(100)
-
-function handleAumentar() {
-  setNumero(numero + 100)
+function App() {
+  const [numero, setNumero] = useState(100);
+  const [esconder, setEsconder] = useState(false);
+  
+ function handleMostrarEsconder(){
+  esconder === true ? setEsconder(false) : setEsconder(true);
 }
 
   return (
-<section>
-  <h1>App</h1>
+   <div>
+    <h1>VALOR= {numero}</h1>
+    <button onClick={handleMostrarEsconder}>{esconder === true ? "Mostrar" : "Esconder"} </button>
+     {esconder === true}
+    </div>
+   
 
-  <div>
-    <h2>
-      numero:{numero}
-    </h2>
-    <button onClick={handleAumentar}>Duplicar</button>
-  </div>
-</section>
-  )
-}
+  );
+  }
+
+
+export default App;
+
