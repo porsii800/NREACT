@@ -13,7 +13,7 @@ function App() {
    <div>
     <h1>VALOR= {numero}</h1>
     <button onClick={handleMostrarEsconder}>{esconder === true ? "Mostrar" : "Esconder"} </button>
-     {esconder === true}
+     {esconder === true }
     </div>
    
 
